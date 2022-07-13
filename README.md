@@ -43,6 +43,7 @@ d. Renomeie as colunas anteriores para nomes em português.
 4. A empresa Contoso precisa fazer contato com os fornecedores de produtos para repor o estoque. Você é da área de compras e precisa descobrir quem são esses
 fornecedores. Utilize um comando em SQL para retornar apenas os nomes dos fornecedores na tabela dimProduct e renomeie essa nova coluna da tabela.
 
+## Questão 5 ##
 5. O seu trabalho de investigação não para, você precisa descobrir se existe algum produto registrado na base de produtos que ainda não tenha sido vendido. Tente
 chegar nessa informação.
 Obs: caso tenha algum produto que ainda não tenha sido vendido, você não precisa descobrir qual é, é suficiente saber se teve ou não algum produto que ainda não 
