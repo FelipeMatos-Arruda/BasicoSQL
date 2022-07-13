@@ -12,17 +12,17 @@ O que você precisará fazer é confirmar se:
 
 a. Existem 2.517 produtos cadastrados na base e, se não tiver, você deverá reportar ao seu gestor para saber se existe alguma defasagem no controle dos produtos.
 
-'''
+```
 SELECT COUNT (ProductKey) AS 'Quantidade de produtos'
 FROM DimProduct
-'''
+```
 
 b. Até o mês passado, a empresa tinha um total de 19.500 clientes na base de controle. Verifique se esse número aumentou ou reduziu.
 
-'''
+```
 SELECT COUNT(CustomerKey) AS 'Quantidade de Clientes'
 FROM DimCustomer
-'''
+```
   
 ## Questão 2 ##
 
