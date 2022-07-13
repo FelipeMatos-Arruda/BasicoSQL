@@ -31,7 +31,21 @@ Para isso, você vai precisar listar todos os clientes e as suas respectivas dat
 
 a. Selecione as colunas: CustomerKey, FirstName, EmailAddress, BirthDate da tabela dimCustomer.
 
+```
+SELECT CustomerKey, FirstName, EmailAddress,BirthDate
+FROM DimCustomer
+```
+
 b. Renomeie as colunas dessa tabela usando o alias (comando AS).
+
+```
+SELECT 
+	CustomerKey AS 'Chave do Cliente', 
+	FirstName AS 'Primeiro Nome', 
+	EmailAddress AS 'Endereço de E-mail',
+	BirthDate AS 'Data de Aniversário'
+FROM DimCustomer
+```
 
 ## Questão 3 ##
 
@@ -41,20 +55,55 @@ clientes desde a inauguração. Você foi alocado para levar adiante essa ação
 a. A Contoso decidiu presentear os primeiros 100 clientes da história com um vale compras de R$ 10.000. Utilize um comando SQL para retornar uma tabela com os 
 primeiros 100 primeiros clientes da tabela dimCustomer (selecione todas as colunas).
 
+```
+SELECT TOP (100) * 
+FROM DimCustomer
+```
+
 b. A Contoso decidiu presentear os primeiros 20% de clientes da história com um vale compras de R$ 2.000. Utilize um comando em SQL para retornar 10% das linhas da sua
 tabela dimCustomer (selecione todas as colunas).
 
+```
+SELECT TOP 20 PERCENT *
+FROM DimCustomer
+```
+
 c. Adapte o código do item a) para retornar apenas as 100 primeiras linhas, mas apenas as colunas FirstName, EmailAddress, BirthDate.
+
+```
+SELECT TOP (100) 
+	FirstName,
+	EmailAddress,
+	BirthDate
+FROM DimCustomer
+```
 
 d. Renomeie as colunas anteriores para nomes em português.
 
+```
+SELECT TOP (100) 
+	FirstName AS 'Primeiro Nome',
+	EmailAddress AS 'Endereço de Email',
+	BirthDate AS 'Data de Aniversário'
+FROM DimCustomer
+```
 ## Questão 4 ##
 
 4. A empresa Contoso precisa fazer contato com os fornecedores de produtos para repor o estoque. Você é da área de compras e precisa descobrir quem são esses
 fornecedores. Utilize um comando em SQL para retornar apenas os nomes dos fornecedores na tabela dimProduct e renomeie essa nova coluna da tabela.
+
+```
+SELECT DISTINCT Manufacturer AS 'Fornecedores'
+FROM DimProduct
+```
 
 ## Questão 5 ##
 5. O seu trabalho de investigação não para, você precisa descobrir se existe algum produto registrado na base de produtos que ainda não tenha sido vendido. Tente
 chegar nessa informação.
 Obs: caso tenha algum produto que ainda não tenha sido vendido, você não precisa descobrir qual é, é suficiente saber se teve ou não algum produto que ainda não 
 foi vendido.
+
+```
+SELECT DISTINCT ProductKey 
+FROM FactSales
+```
